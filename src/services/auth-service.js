@@ -5,11 +5,17 @@ const API_URL = import.meta.env.VITE_API_BASE_URL;
 console.log('URL de la API:', `${API_URL}/register`);
 export async function register(name, email, password) {
     try {
-        const response = await axios.post(`${API_URL}/register`, {
+        const response = await axios.post(`${API_URL}/api/register`, {
             name,
             email,
             password,
+        }, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
         });
+
         console.log('Registro exitoso:', response.data);
         return response.data;
     } catch (error) {
@@ -20,7 +26,7 @@ export async function register(name, email, password) {
 
 export async function login(email, password) {
     try {
-        const response = await axios.post(`${API_URL}/login`, {
+        const response = await axios.post(`${API_URL}/api/login`, {
             email,
             password,
         });
@@ -34,7 +40,7 @@ export async function login(email, password) {
 
 export async function logout() {
     try {
-        const response = await axios.post(`${API_URL}/logout`);
+        const response = await axios.post(`${API_URL}/api/logout`);
         console.log('Cierre de sesión exitoso:', response.data);
         return response.data;
     } catch (error) {

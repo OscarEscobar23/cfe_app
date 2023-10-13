@@ -4,7 +4,7 @@
     // Para registrar un nuevo usuario
     async function handleRegister() {
         try {
-            const data = await register('Nombre', 'correo@example.com', 'contraseña123');
+            const data = await register('Oscar2', 'correo10@example.com', 'contraseña123');
             console.log('Datos de registro:', data);
         } catch (error) {
             console.error('Error de registro:', error);
@@ -14,7 +14,7 @@
     // Para iniciar sesión
     async function handleLogin() {
         try {
-            const data = await login('correo@example.com', 'contraseña123');
+            const data = await login('corre5o@example.com', 'contraseña123');
             console.log('Datos de inicio de sesión:', data);
         } catch (error) {
             console.error('Error de inicio de sesión:', error);
