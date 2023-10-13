@@ -3,11 +3,11 @@ import axios from 'axios';
 
 const API_URL = import.meta.env.VITE_API_BASE_URL;
 console.log('URL de la API:', `${API_URL}/register`);
-export async function register(name, email, password) {
+export async function register(name, rpe, password) {
     try {
         const response = await axios.post(`${API_URL}/api/register`, {
             name,
-            email,
+            rpe,
             password,
         }, {
             headers: {
@@ -24,10 +24,10 @@ export async function register(name, email, password) {
     }
 }
 
-export async function login(email, password) {
+export async function login(rpe, password) {
     try {
         const response = await axios.post(`${API_URL}/api/login`, {
-            email,
+            rpe,
             password,
         });
         console.log('Inicio de sesión exitoso:', response.data);

@@ -4,7 +4,7 @@
     // Para registrar un nuevo usuario
     async function handleRegister() {
         try {
-            const data = await register('Oscar2', 'correo10@example.com', 'contraseña123');
+            const data = await register('Oscar Escobar', '9MDKL', '9mdkl2023');
             console.log('Datos de registro:', data);
         } catch (error) {
             console.error('Error de registro:', error);
